@@ -1,0 +1,35 @@
+/*Program to generate fibonnaci sequence using recursive function*/
+
+//function to claculate area of square
+#include<stdio.h>
+#include<math.h>
+#include<string.h>
+
+int fibo(int n);
+int fibo(int n){
+        
+        if (n==0){
+            return 0;
+            
+        }
+        if (n==1){
+        return 1;
+            
+        }
+    
+    int fibnm1 = fibo(n-1);
+    int fibnm2 = fibo(n-2);
+    int fibon = fibnm1 +fibnm2;
+    
+    printf(" fibonaci sequence of %d is %d \n ",n,fibon);
+    
+    return fibon;
+    
+}
+
+
+int main(){
+    int num = 10;
+    fibo(num);
+    return 0;
+}

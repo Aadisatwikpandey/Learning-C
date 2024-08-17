@@ -1,0 +1,16 @@
+#include <stdio.h>
+int gst(float amt){
+    float gst;
+    gst=18*amt/100;
+    amt+=gst;
+    printf("%.2f",amt);
+    return amt;
+}
+
+
+int main()
+{
+    int sum=500;
+ gst(sum);
+  return 0;
+}

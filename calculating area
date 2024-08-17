@@ -1,0 +1,78 @@
+/*Program to calculate area of square, circle and rectangle*/
+
+//function to claculate area of square
+#include<stdio.h>
+#include<math.h>
+#include<string.h>
+
+//Declare functions
+int square(float side);
+int circle(float r);
+int rectangle(float a,float b);
+
+//write function for calculating square
+int square(float side){
+    side=pow(side,2);
+    printf("The area of square is: %.2f\n",side);
+    return 0;
+}
+
+//write function to calculate circle
+int circle(float r){
+    const float pi = 3.142857142;
+    float area;
+    area = pi * pow(r,2);
+    printf("The area of circle is :%.4f \n",area);
+    return 0;
+}
+
+// write function to calculate the area of rectangle
+int rectangle(float a,float b){
+    float area = a*b;
+    printf("The area of rectangle is:%.2f \n",area);
+    return 0;
+    
+}
+
+//Define the main function asking from the user
+
+int main(){
+    char choice;
+    printf("Please Enter:\n 1. s to calulate square \n 2. r to calculate rectangle \n 3. c to calculate circle\n");
+    scanf("%c",choice);
+    
+    //use switch to go between one case to another
+    
+    switch(choice){
+        //if the choice is square
+        case 's':
+        float side;
+        printf("Please enter the side of square: \n");
+        scanf("%f",side);
+        square(side);
+        break;
+        
+        //if the choice is rectangle
+        
+        case 'r':
+        float a, b;
+        printf("Please Enter the value of both side a and b respectively: \n");
+        scanf("%f %f",a,b);
+        rectangle(a,b);
+        break;
+        
+        // if the choice is to calculate area of circle
+        
+        case 'c':
+        float rad;
+        printf("Please enter the radius of square: \n");
+        scanf("%f",rad);
+        circle(rad);
+        break;
+        
+        default:
+        printf("You haven't enter the correct option.");
+        break;
+    }
+    return 0;
+}

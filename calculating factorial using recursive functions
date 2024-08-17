@@ -1,0 +1,23 @@
+/*Program to calculate factorial of a number using recursive function*/
+
+//function to claculate area of square
+#include<stdio.h>
+#include<math.h>
+#include<string.h>
+
+int factorial(int n);
+int factorial(int n){
+    if (n == 1){
+        return 1;
+    }
+    int factnm1=factorial(n-1);
+    int factorial = factnm1*n;
+    return factorial;
+}
+
+int main(){
+    
+    factorial(5);
+    printf("%d",factorial(5));
+    return 0;
+}

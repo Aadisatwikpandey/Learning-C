@@ -1,0 +1,21 @@
+
+#include <stdio.h>
+
+int main(){
+    int arr[100], sum, num;
+    //initialize the sum to be zero
+    sum = 0;
+    // take input for taking the length of the array to to be formed
+    printf("please enter the length of the array ");
+    scanf("%d",&num);
+    printf("%d\n",num);
+    // take input from the user and store it in the array arr
+    for(int i = 0 ;i < num;i++){
+        printf("please enter %d number\n",i+1);
+        scanf("%d",&arr[i]);
+        sum += arr[i];
+        // printf("%d \n",arr[i]);
+    }
+    printf("%d",sum);
+    return 0;
+}
